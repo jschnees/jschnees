@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro');
+
+:root{
+  --MaxWidth: 45vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Reset */
+body, html, ul, li{
+  margin: 0px;
+  padding: 0px;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0.1em;
+  text-align: left;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+}
+
+  /* general */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
+  /* font family */
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+p, h1, h2, h3, ul, li{
+  line-height: 2;
+  justify-content: left;
+  text-align: left;
+  margin: 0;
+  list-style: none;
+}
+
+h1{
+  font-size: 5vh;
+  font-family: 'Oswald', sans-serif;
+  -webkit-filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));
+  filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));
+}
+
+/* enlarges the first word of a paragraph */
+.titleWord{
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* Main Content container */
+Main {
+  padding: 1vw;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Work - Main Landing Page */
+.Work {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 30px;
+  height: auto;
+}
+.Work > div {
+  display: flex; 
+  flex-direction: column;
+  flex-basis: calc(95%/2);
+  height: auto;
+  justify-content: justify;
+  text-align: justify;
+  margin: 2vh auto;
+  line-height: 1.25; 
+  -webkit-filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));
+  filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.25));
+}
+
+/* Full Image Overlay for landing page main gallery*/
+.MainItem {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: var(--MaxWidth);
+}
+
+.MainItemIMG { 
+  display: block;
+  width: var(--MaxWidth);
+  height: auto;
+}
+
+.overlay {
+  background: rgb(255, 255, 255);
+  bottom: 0;
+  font-size: 1em;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 3.75em 3em;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.overlay:hover { opacity: 1; }
+
+.overlay:after,
+.overlay:before {
+  border: 1px dashed rgba(88, 88, 88, 0.7);
+  bottom: 1em;
+  content: '';
+  left: 1em;
+  opacity: 0;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: 0.6s 0.2s;
+  transition: 0.6s 0.2s;
+}
+
+.overlay:before {
+  border-bottom: none;
+  border-top: none;
+  left: 2em;
+  right: 2em;
+}
+
+.overlay:after {
+  border-left: none;
+  border-right: none;
+  bottom: 2em;
+  top: 2em;
+}
+
+.overlay:hover:after,
+.overlay:hover:before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+opacity: 1;
+}
+
+.imageThumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(255,255,255);
+}
+
+.IMGContainer:hover .imageOverlay {
+  opacity: 1;
+}
+
+.overlayText {
+  color: rgb(0,0,0);
+  font-size: 5vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.ProjectHeadline{
+  width: 70vw;
+  height: auto;
+  margin: auto;
+  border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+/* Description of Project */
+.Project {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: no-wrap;
+  flex-direction: column;
+}
+.Project p a:link, a:visited, a:hover, a:active{
+  text-decoration: underline;
+}
+.Project > div {
+  height: auto;
+  width: var(--MaxWidth);
+  margin: 5vh auto;
+  line-height: 1.25; 
+}
+.Project > div > img {
+  width: var(--MaxWidth);
+  height: auto;
+  justify-content: center;
+  margin: auto;
+}
+
+.Project .imgDescription{
+  margin-left: 2vw;
+}
+
+  /* About Page */
+.About {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  margin: auto;
+  padding: 25px;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+.About > div {
+  display: block;
+  margin: 2vh auto;
+  width: 40%;
+  height: auto;
+}
+.About p, h1, h2, h3{
+  line-height: 2;
+  justify-content: left;
+  text-align: left;
+}
+.selfie{
+  width: 30vw;
+  height: auto;
+}
+
+
+/** Lightbox **/
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+	/** Position and style */
+  position: fixed;
+  display: none;
+  width: 200%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  clear: both;
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 100%;
+	max-height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}
+
+
+/*tablets*/
+@media only screen and (max-width: 1024px) {
+  .arrow-down{
+    display: none;
+  }
+    
+  #scrollBtn {
+    display: none;
+    visibility: hidden;
+  }
+
+  .responiveHidden{
+    display: none;
+  }
+  
+  .MainItem {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 80vw;
+  }
+  
+  .MainItemIMG { 
+    display: block;
+    width: 80vw;
+    height: auto;
+  }
+}
+
+/*phones*/
+@media only screen and (max-width: 600px) {
+
+/* Description of Project */
+
+
+.Project .imgDescription{
+  margin-left: 10px;
+}
+  /* Disables a link - for lightbox and overlay - when on smaller screens */
+  a[href*="#"] {
+    pointer-events: none;
+  }
+  [id*="overlayContainer"] {
+    pointer-events: none;
+  }
+
+  /* About Page */
+  .About > div {
+    width: 90%;
+  }
+  .selfie{
+    width: 60vw;
+    height: auto;
+  }
+/* Work - Main Landing Page */
+
+  .Work > div {
+    flex-basis: 100%;
+  }
+
+}
