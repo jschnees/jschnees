@@ -1,0 +1,160 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>PC Engineers - Progressive Consulting Engineers</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/logo.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/gallery.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="PC Engineers - Progressive Consulting Engineers" />
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+</head>
+<body>
+<!--banner start here-->
+				<div class="logo">
+					<span class="logotitle">
+						<h1><a href="index.html">PC Engineers</a></h1>
+						<h3>Progressive Consulting Engineers</h3>
+					</span>
+					<img src="img/logotransparent.png" alt="PC Engineers">
+				</div>
+<div class="banner-two">
+  <div class="header">
+	<div class="container">
+		 <div class="header-main">
+				<div class="top-nav">
+				  <nav class="cl-effect-1">
+					<ul class="res">
+					   <li><a href="index.html">Home</a></li> 
+					   <li><a href="about.html">About</a></li> 
+						<li><a href="services.html">Services</a></li> 
+						<li><a  class="active" href="gallery.html">Gallery</a></li> 
+						<li><a href="contact.html">Contact</a></li> 
+				   </ul>
+				  </nav>
+
+				</div>
+			   <div class="clearfix"> </div>
+		 </div>
+	  </div>
+	 </div>
+ </div>
+<!--banner end here-->
+
+<!--gallery start here-->
+<div class="gallery">
+			<div class="top">
+				<h3>Gallery</h3>
+				<p>View our past projects.</p>
+			</div>
+
+	<div class="row">
+
+		<div class="column">
+			<img src="projects/g1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+		</div>
+
+		<div class="column">
+			<img src="projects/g2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+		</div>
+
+		<div class="column">
+			<img src="projects/g3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+		</div>
+
+		<div class="column">
+			<img src="projects/g4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+	</div>
+
+	<div id="myModal" class="modal">
+ 	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+
+    	<div class="mySlides">
+	<div class="numbertext">1 / 4</div>
+		<img src="projects/g1.jpg" style="width:100%">
+	 </div>
+
+	<div class="mySlides">
+	<div class="numbertext">2 / 4</div>
+		<img src="projects/g2.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides">
+		<div class="numbertext">3 / 4</div>
+		<img src="projects/g3.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides">
+		<div class="numbertext">4 / 4</div>
+		<img src="projects/g4.jpg" style="width:100%">
+	</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+
+	<div class="column">
+		<img class="demo" src="projects/g1.jpg" onclick="currentSlide(1)" alt="Nature">
+	</div>
+
+	<div class="column">
+		<img class="demo" src="projects/g2.jpg" onclick="currentSlide(2)" alt="Trolltunga">
+	</div>
+
+	<div class="column">
+		<img class="demo" src="projects/g3.jpg" onclick="currentSlide(3)" alt="Mountains">
+	</div>
+
+	<div class="column">
+		<img class="demo" src="projects/g4.jpg" onclick="currentSlide(4)" alt="Lights">
+	</div>
+</div>
+
+<!--gallery end here-->
+
+<!--footer start here-->
+	<div class="footer">
+		<div class="copyright">	
+			<p>6479 Reflections Drive, Suite 230</p>
+			<p>Dublin, Ohio  43017</p>
+			<p>Ph : 614.389.2807
+			<br />Fax : 614.389.2895
+			</p>
+			<p>© 2016 Progressive Consulting Engineers. All rights reserved. </a></p>
+		</div>	
+		<script type="text/javascript">
+			$(document).ready(function() {
+			/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+			*/
+											
+			$().UItoTop({ easingType: 'easeOutQuart' });
+											
+			});
+		 </script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+<!--footer end here-->
+	
+</body>
+</html>
