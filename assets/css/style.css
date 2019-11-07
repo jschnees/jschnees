@@ -124,7 +124,6 @@ Main {
 
 .overlay:after,
 .overlay:before {
-  border: 1px dashed rgba(88, 88, 88, 0.7);
   bottom: 1em;
   content: '';
   left: 1em;
