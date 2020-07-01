@@ -99,8 +99,8 @@ Main {
 
 .MainItemIMG { 
   display: block;
-  width: auto;
-  height: auto;
+  width: 800px;
+  height: 450px;
 }
 
 .overlay {
