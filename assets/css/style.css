@@ -99,7 +99,7 @@ Main {
 
 .MainItemIMG { 
   display: block;
-  width: var(--MaxWidth);
+  width: auto;
   height: auto;
 }
 
